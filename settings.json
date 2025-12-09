@@ -1,0 +1,231 @@
+{
+  "prettier": {
+    "allowed": true
+  },
+  "toolbar": {
+    "breadcrumbs": true
+  },
+  "helix_mode": false,
+  "file_scan_exclusions": ["**/.git", "**/target", "**/build", "**/.gradle", "**/node_modules"],
+  "preferred_line_length": 100,
+  "tab_size": 4,
+  "hard_tabs": false,
+  "auto_update": true,
+  "format_on_save": "off",
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "show_edit_predictions": false,
+  "agent": {
+    "play_sound_when_agent_done": false,
+    "always_allow_tool_actions": true,
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    }
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "vim_mode": true,
+  "relative_line_numbers": "disabled",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_weight": 400,
+  // "buffer_font_family": "Minecraft",
+  "buffer_font_family": "FiraCode Nerd Font",
+  "theme": "Rosé Pine Moon",
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "max_severity": "warning"
+    }
+  },
+  "lsp": {
+    "hls": {
+      "initialization_options": {
+        "haskell": {
+          "formattingProvider": "fourmolu"
+        }
+      }
+    },
+    "jdtls": {
+      "settings": {
+        "java.compile.nullAnalysis.mode": "disabled",
+        "java": {
+          "home": "/opt/homebrew/Cellar/openjdk@21/24/libexec/openjdk.jdk/Contents/Home", // Using OpenJDK 21
+          "runtimes": [
+            {
+              "name": "JavaSE-17",
+              "path": "/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home"
+            },
+            {
+              "name": "JavaSE-21",
+              "path": "/opt/homebrew/Cellar/openjdk@21/21.0.7/libexec/openjdk.jdk/Contents/Home"
+            }
+          ],
+          "jdt": {
+            "ls": {
+              "vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Djdk.module.illegalAccess.silent=true -XX:+UnlockExperimentalVMOptions",
+              "lombokSupport": {
+                "enabled": true
+              }
+            }
+          },
+          "errors": {
+            "incompleteClasspath": {
+              "severity": "warning"
+            },
+            "inferredMethod": {
+              "severity": "info"
+            },
+            "unusedImport": {
+              "severity": "warning"
+            },
+            "unknownType": {
+              "severity": "error"
+            },
+            "serializableHasNoSerialVersionUIDField": {
+              "severity": "warning"
+            }
+          },
+          "problems": {
+            "includeAllSources": true,
+            "showAllProblems": true
+          },
+          "configuration": {
+            "updateBuildConfiguration": "automatic",
+            "maven": {
+              "userSettings": null
+            }
+          },
+          "import": {
+            "maven": {
+              "enabled": true
+            },
+            "gradle": {
+              "enabled": true,
+              "wrapper": {
+                "enabled": true
+              }
+            }
+          },
+          "referencesCodeLens": {
+            "enabled": true
+          },
+          "implementationsCodeLens": {
+            "enabled": true
+          },
+          "signatureHelp": {
+            "enabled": true
+          },
+          "format": {
+            "enabled": true,
+            "settings": {
+              "profile": "GoogleStyle",
+              "url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml"
+            },
+            "onType": {
+              "enabled": true,
+              "semicolon": true,
+              "closingBrace": true
+            },
+            "comments": {
+              "enabled": true
+            }
+          },
+          "saveActions": {
+            "organizeImports": true,
+            "cleanup": {
+              "enabled": true,
+              "actions": ["qualifyMembers", "qualifyStaticMembers", "addFinalModifier"]
+            }
+          },
+          "contentProvider": {
+            "preferred": "fernflower"
+          },
+          "autobuild": {
+            "enabled": true
+          },
+          "completion": {
+            "favoriteStaticMembers": [
+              "org.junit.Assert.*",
+              "org.junit.jupiter.api.Assertions.*",
+              "org.mockito.Mockito.*",
+              "java.util.Objects.requireNonNull",
+              "java.util.Collections.*"
+            ],
+            "importOrder": ["java", "javax", "com", "org"],
+            "enabled": true,
+            "guessMethodArguments": true,
+            "filteredTypes": ["java.awt.*", "com.sun.*"],
+            "overwrite": false,
+            "parameterNames": true
+          },
+          "inlayHints": {
+            "parameterNames": {
+              "enabled": "all"
+            },
+            "typeAnnotations": true
+          },
+          "quickfix": {
+            "showAt": "line",
+            "enabled": true
+          },
+          "codeGeneration": {
+            "generateComments": true,
+            "useBlocks": true
+          },
+          "project": {
+            "resourceFilters": ["node_modules", ".git"]
+          },
+          "selectionRange": {
+            "enabled": true
+          },
+          "progressReports": {
+            "enabled": true
+          },
+          "toString": {
+            "codeStyle": "STRING_BUILDER_CHAINED",
+            "skipNullValues": true,
+            "listArrayContents": true
+          }
+        }
+      }
+    },
+    "clangd": {
+      "binary": {
+        "path": "clangd",
+        "arguments": [
+          "--compile-commands-dir=.",
+          "--background-index",
+          "--completion-style=detailed"
+        ]
+      }
+    }
+  },
+  "languages": {
+    "Haskell": {
+      "edit_predictions_disabled_in": ["comment"]
+    },
+    "YAML": {
+      "tab_size": 2
+    },
+    "JSONC": {
+      "tab_size": 2
+    }
+  }
+}
